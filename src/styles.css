@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-image: url(./app/images/tavern.jpg);
+  height: 1400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1, h2, h3{
+  text-align: center;
+  color: antiquewhite;
+}
+
+button {
+
+  color:black;
+  font-size: medium;
+}
+/* input[type=text] {
+  width: 100%;
+  text-align: center;
+  padding: 1.0em;
+  font-size: 1.5em;
+
+}
+input[type=text]:focus {
+  border: 3px solid #555;
+  padding: 1em;
+  text-align: center;
+} */
+
+
+p {
+  text-align: center;
+  color: white;
+
+
+}
+
+
+
+
+
+
+
+

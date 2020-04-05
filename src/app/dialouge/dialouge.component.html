@@ -1,0 +1,56 @@
+
+<div>
+
+  <div class="travelSection">
+
+
+      <h1 *ngIf="travelerSignedUp">Alright Mr/MS {{lastNameSection}} , what can I do you for?</h1>
+
+
+
+      <div class="firstConversation" *ngIf="!travelerSignedUp && !NewTraveler" >
+        <h1>Greetings, traveler!</h1>
+        <h1> Haven't seen your face around here before.</h1>
+        <h1>What's your name?</h1>
+
+        <div class="col-xs-12 col-md-8 col-md-offset-2 text-center p-5">
+          <div class = "form-group">
+            <input type="text" class="form-control" #nameSection placeholder="Name" style="margin-bottom: 0.9px; height: 40px;">
+            <input type="text" class="form-control" #lastNameSection placeholder="Lastname" style="margin-bottom: 0.9px; height: 40px;">
+
+          </div>
+
+
+          <button class="button" (click)="submit(nameSection.value, lastNameSection.value)">Submit</button>
+
+        </div>
+
+
+
+
+    </div>
+
+    <div *ngIf="NewTraveler">
+      <h2>Hello again, Mr/Ms. {{traveler}} The usual?</h2>
+      <app-the-usual (usual)="getUsualOrder($event)" (purchaseDone)="getUsualOrder($event)"></app-the-usual>
+      <h2 *ngIf="usualBevMealChoice">The usual {{usualBevMeal}} is on the way!</h2>
+      </div>
+
+
+  </div>
+<app-select-beverage *ngIf="travelerSignedUp || NewTraveler" (bev)="getBevMeal($event)"></app-select-beverage>
+  <div class = "text-center">
+    <button class="btn btn-lg btn-danger" (click)="deleteTraveler()">I was never here</button>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+

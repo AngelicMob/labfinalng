@@ -1,0 +1,59 @@
+
+<div class="row">
+        <hr>
+
+
+        <div  class="col-xs-12 col-md-8 col-md-offset-2">
+
+
+
+          <div class="list-group" *ngIf="!bevMealSelected">
+
+            <h3>What drink or meal would you like to order?</h3>
+
+            <h3>Alcoholic Drinks</h3>
+              <hr>
+
+
+              <button type="button" class="list-group-item list-group-item-action" (click)="Order('Nord Mead')">Nord Mead</button>
+              <button type="button" class="list-group-item list-group-item-action" (click)="Order('Honey Mead')">Honningbrew Mead</button>
+              <button type="button" class="list-group-item list-group-item-action" (click)="Order('Spiced Wine')">Spiced Wine</button>
+              <button type="button" class="list-group-item list-group-item-action" (click)="Order('Colovian Brandy')">Colovian Brandy</button>
+              <button type="button" class="list-group-item list-group-item-action" (click)="Order('Rum')">Stros-M'kai Rum</button>
+              <button type="button" class="list-group-item list-group-item-action" (click)="Order('Skooma')">Skooma</button>
+
+
+
+              <h3>Meals</h3>
+
+        <hr>
+
+
+              <button type="button" class="list-group-item list-group-item-action" (click)="Order('Apple Pie')">Apple Pie & Vanilla</button>
+              <button type="button" class="list-group-item list-group-item-action" (click)="Order('Sweetroll')">Sweetroll</button>
+              <button type="button" class="list-group-item list-group-item-action" (click)="Order('Horker')">Horker Stew</button>
+              <button type="button" class="list-group-item list-group-item-action" (click)="Order('Lavender Bread')">Lavender Bread</button>
+              <button type="button" class="list-group-item list-group-item-action" (click)="Order('Cheese')">Cheese</button>
+              <button type="button" class="list-group-item list-group-item-action" (click)="Order('Braided Bread')">Braided Bread</button>
+
+
+            </div>
+
+
+
+
+        <hr>
+
+           <h2 *ngIf="bevMealSelected">One {{beverageMeal}}, coming right up!</h2>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
